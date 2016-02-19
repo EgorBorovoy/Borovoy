@@ -5,10 +5,13 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); 
         int i ;
-        System.out.print("Enter number; ");
-       
+        int a ;
+        int b ;
+        System.out.println("Enter number a,b,i");
           i = sc.nextInt();
-          System.out.println(i*2);
+          a = sc.nextInt();
+          b = sc.nextInt();
+          System.out.println(i/b+a*2);
      
        
         }
