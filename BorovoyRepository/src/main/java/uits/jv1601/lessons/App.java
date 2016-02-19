@@ -8,8 +8,8 @@ public class App {
         System.out.print("Enter number; ");
        
           i = sc.nextInt();
-          System.out.println(i*2);
+          System.out.println(i*22); 
      
-       
+       //gg wp
         }
     }
