@@ -1,4 +1,4 @@
-package uits.jv1601.lessons.oop1;
+package uits.jv1601.lessons;
 
 import java.util.Scanner;
 
