@@ -11,7 +11,7 @@ package uits.jv1601.lessons.oop1;
  */
 public class App {
     public static void main(String[] args) {
-        Pan pan1=new Pan();
+        Paralipiped pan1=new Pan();
         Pan pan2=new Pan();
         double vol,pi=3.14;
         pan1.width=10;
