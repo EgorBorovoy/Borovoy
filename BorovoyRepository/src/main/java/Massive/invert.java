@@ -5,8 +5,6 @@ import java.util.Random;
 
 public class invert {
     public static void main(String[] args) {
-//  int[]arr;
-//   arr=new int[]{0, 1, 2, 4, 3, 5, 6, 7, 8, 9};
         int[][]arr=new int[5][5];
         Random f=new Random();
          for (int i = 0;i < 5; i++) {
@@ -17,16 +15,19 @@ public class invert {
                 invert(arr);
                 System.out.print(Arrays.toString(arr));
             }
-               public static void invert(int[][]arr){
-                       for(int k=0;k<arr.length/2;k++){
-                           for(int h=0;h<arr.length/2;h++){
-                       
-                           int tmp=arr[k][h];
-                           arr[k][h]=arr[arr.length-k-1];
-                           arr[arr.length-k-h-1]=tmp;
-                       }
+         }
+    }
+    public static void invert(int[][]arr){
+        for(int k=0;k<arr.length/2;k++){
+            for(int h=0;h<arr.length/2;h++){
+                int tmp=arr[k][h];
+                arr[k][h]=arr[arr.length-k-1][arr.length-h-1];
+                arr[arr.length-k-1][arr.length-h-1]=tmp;
+            }
+        }
                
                    
     }
+               
     
 }
