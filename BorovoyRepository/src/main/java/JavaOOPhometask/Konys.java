@@ -1,5 +1,8 @@
 package JavaOOPhometask;
 public class Konys extends Enter{
+       public static double Konys(double R,double H) {
+        return(double)((Math.PI*R*R*H)*1/3);
+    }
     private int R;
     private int H;
 

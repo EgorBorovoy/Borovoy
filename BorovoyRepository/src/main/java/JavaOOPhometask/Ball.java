@@ -1,5 +1,8 @@
 package JavaOOPhometask;
 public class Ball extends Enter{
+     public static double Ball(double r) {
+        return(double)((4*Math.PI*r*r*r)/3);
+    }
     private int r;
 
     public Ball() {

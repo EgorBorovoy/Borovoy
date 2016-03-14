@@ -1,19 +1,7 @@
 package JavaOOPhometask;
 import java.util.Scanner;
 public class Enter {
-    public static double Paralepiped(double r,double h) {
-      return(double)(Math.PI*r*r*h);  
-    }
-    public static double Ball(double r) {
-        return(double)((4*Math.PI*r*r*r)/3);
-    }
-    public static double Cylinder(double w,double h,double l) {
-        return(double)(w*h*l);
-    }
-     public static double Konys(double R,double H) {
-        return(double)((Math.PI*R*R*H)*1/3);
-    }
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
     String vol;
     boolean finish=false;
@@ -23,7 +11,8 @@ public class Enter {
         System.out.println("Enter Number 2 for Volume Ball");
         System.out.println("Enter Number 3 for Volume Cylinder");
         System.out.println("Enter Number 4 for Volume Konys");
-        System.out.println("Enter 5 for exit");
+        System.out.println("Enter Number 5 for Volume YsKonys");
+        System.out.println("Enter 6 for exit");
         int operation=sc.nextInt();
      
   
@@ -34,14 +23,14 @@ public class Enter {
             int r=sc.nextInt();
             System.out.println("Enter h");
             int h=sc.nextInt();
-            System.out.println("Res"+Paralepiped(r, h));
+            System.out.println("Res"+Paralipiped.Paralepiped(r, h));
                break;
         
                 case 2:vol="Volume Ball";
                 System.out.println("Volume Ball");
                 System.out.println("Enter r");
                 int r1=sc.nextInt();
-                System.out.println("Res"+Ball(r1));
+                System.out.println("Res"+Ball.Ball(r1));
                break;
                
                 case 3: vol="Volume Cylinder";
@@ -52,7 +41,7 @@ public class Enter {
                 int l=sc.nextInt();
                 System.out.println("Enter l");
                 int h1=sc.nextInt();
-                System.out.println("Res"+Cylinder(w, h1, l)); 
+                System.out.println("Res"+Cilindr.Cylinder(w, h1, l)); 
                break;
                 case 4:vol="Volume Konus";
                     System.out.println("Volume Konus");
@@ -60,11 +49,22 @@ public class Enter {
                     int H=sc.nextInt();
                     System.out.println("Enter R");
                     int R=sc.nextInt();
-                    System.out.println("Res"+Konys(R,H));
+                    System.out.println("Res"+Konys.Konys(R,H));
+                    break;
+                case 5:vol="Volume YsKonys";
+                    System.out.println("YsKonys");
+                    System.out.println("ENTER R");
+                    int R1=sc.nextInt();
+                    System.out.println("Enter r1");
+                    int R2=sc.nextInt();
+                    System.out.println("Enter h");
+                    int h2=sc.nextInt();
+                    System.out.println("Res"+YsKonys.YsKonys(R1, R2, h2));
+                         break;
             default:vol="Exit";
           }
         System.out.println(vol);
-        if (operation>4){
+        if (operation>5){
             finish=true;
         }
       

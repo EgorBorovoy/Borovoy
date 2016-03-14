@@ -1,5 +1,8 @@
 package JavaOOPhometask;
 public class Paralipiped extends Enter{
+      public static double Paralepiped(double r,double h) {
+      return(double)(Math.PI*r*r*h);  
+    }
    private int r;
    private int h;
 

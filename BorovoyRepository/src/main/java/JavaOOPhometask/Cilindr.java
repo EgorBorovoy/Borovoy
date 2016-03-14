@@ -1,5 +1,8 @@
 package JavaOOPhometask;
 public class Cilindr extends Enter{
+    public static double Cylinder(double w,double h1,double l) {
+        return(double)(w*h1*l);
+    }
     private int w;
     private int h;
     private int l;
