@@ -5,9 +5,6 @@ public class Trio2 extends Shape{
    point c;
 
     public Trio2() {
-        a=new point(0,0);
-        b=new point(0,10);
-        c=new point(10,10);
     }
 
     public Trio2(point a, point b, point c) {
@@ -41,12 +38,8 @@ public class Trio2 extends Shape{
     }
 
     @Override
-    void vrashenie(double gradysi) {
-        System.out.println("rotatee trio2= "+gradysi+" degri");
+    public String toString() {
+        return "Trio2{" + "a=" + a + ", b=" + b + ", c=" + c + '}';
     }
 
-    @Override
-    public String toString() {
-        return "Trio2{" + "a= " + a + ", b= " + b + ", c= " + c + '}';
-    }
 }
