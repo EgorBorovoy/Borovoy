@@ -1,24 +1,32 @@
 package Small;
-public class Seance extends Conference{
-       String date;
-       String topic;
+public class Seance {
+       int date;
        int peopleQty;
+       String topic;
 
     public Seance() {
     }
 
-    public Seance(String date, String topic, int coll) {
+    public Seance(int date, int peopleQty, String topic) {
         this.date = date;
+        this.peopleQty = peopleQty;
         this.topic = topic;
-        this.peopleQty = coll;
     }
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
+    }
+
+    public int getPeopleQty() {
+        return peopleQty;
+    }
+
+    public void setPeopleQty(int peopleQty) {
+        this.peopleQty = peopleQty;
     }
 
     public String getTopic() {
@@ -29,20 +37,11 @@ public class Seance extends Conference{
         this.topic = topic;
     }
 
-    public int getColl() {
-        return peopleQty;
-    }
-
-    public void setColl(int coll) {
-        this.peopleQty = coll;
-    }
-
     @Override
     public String toString() {
-        return "Seance{" + "date=" + date + ", topic=" + topic + ", coll=" + peopleQty + '}';
+        return "Seance{" + "date=" + date + ", peopleQty=" + peopleQty + ", topic=" + topic + '}';
     }
+       
 
 }
-
-
   

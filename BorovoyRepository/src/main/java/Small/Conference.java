@@ -1,5 +1,5 @@
 package Small;
-public class Conference{
+public class Conference extends Seance{
         String name;
         String place;
 

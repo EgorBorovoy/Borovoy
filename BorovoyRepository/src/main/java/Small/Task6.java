@@ -1,12 +1,24 @@
 package Small;
+
+import static Small.Task6.sc;
 import java.util.Scanner;
+
 public class Task6 {
+
     static Scanner sc = new Scanner(System.in);
-    static Seance[]conf;
+    static Seance[] conf;
+
     public static void main(String[] args) {
-       
-        
+        conf = new Seance[2];
+        for (int i = 0; i < 2; i++) {
+            conf[i] = initConference();
+            conf[i] = initSeance();
+        }
+        System.out.println(pplQty());
+        System.out.println(longname());
+
     }
+
     public static int pplQty() {
         int numConf = 0;
         int pplQty = 0;
@@ -49,8 +61,8 @@ public class Task6 {
     public static Seance initSeance() {
         int peopleQty = getPplQty();
         String topic = getTopic();
-        String date = getDate();
-        return new Seance(date, topic, peopleQty);
+        int date = getDate();
+        return new Seance(date, peopleQty, topic);
     }
 
     public static String getName() {
@@ -109,147 +121,17 @@ public class Task6 {
         return topic;
     }
 
-    public static String getDate() {
-        String date;
+    public static int getDate() {
+        int date;
         while (true) {
-            System.out.println("Ввод Даты ");
-            date = sc.next();
-            if (date.length() > 0) {
+            try {
+                System.out.println("Ввод Даты ");
+                date = Integer.parseInt(sc.next());
                 break;
-            } else {
+            } catch (Exception e) {
                 System.out.println("Ввели не верную дату,повтор ");
             }
         }
         return date;
     }
-            }
-            
-
-
-
-  
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
- 
-    
-    
-
-
+}
